@@ -1,0 +1,61 @@
+<!-- Constellation Connect (for restless feelings)
+     Tap the stars one by one to join them into your own constellation. -->
+<h1>Constellation Connect</h1>
+<p class="hint">Tap the stars in any order you like to join them. When every star is joined, your constellation gets a name.</p>
+<canvas id="sky" width="640" height="380" aria-label="A night sky. Tap stars to connect them."></canvas>
+<div class="row"><button id="undo">Undo</button><button class="primary" id="fresh">New sky</button></div>
+<p class="soft" id="name">Take your time. There's no wrong shape.</p>
+<script>
+const cv = document.getElementById("sky"), ctx = cv.getContext("2d");
+const FIRST = ["The Quiet", "The Brave", "The Gentle", "The Wandering", "The Patient", "The Steady", "The Soft"];
+const SECOND = ["Lantern", "Kite", "Heron", "Compass", "River", "Lotus", "Whale", "Bridge"];
+let stars = [], path = [], dust = [], glow = 0;
+
+function newSky() {
+  stars = []; path = []; glow = 0;
+  const n = 8 + Math.floor(Math.random() * 4);
+  while (stars.length < n) {
+    const s = {x: 50 + Math.random() * (cv.width - 100), y: 40 + Math.random() * (cv.height - 80), tw: Math.random() * 6};
+    if (stars.every(o => Math.hypot(o.x - s.x, o.y - s.y) > 70)) stars.push(s);
+  }
+  dust = Array.from({length: 90}, () => [Math.random() * cv.width, Math.random() * cv.height, Math.random()]);
+  document.getElementById("name").textContent = "Take your time. There's no wrong shape.";
+}
+cv.addEventListener("pointerdown", e => {
+  const r = cv.getBoundingClientRect();
+  const x = (e.clientX - r.left) * cv.width / r.width, y = (e.clientY - r.top) * cv.height / r.height;
+  const i = stars.findIndex(s => Math.hypot(s.x - x, s.y - y) < 26);
+  if (i < 0 || path.includes(i)) return;
+  path.push(i);
+  if (path.length === stars.length) {
+    const name = FIRST[Math.floor(Math.random() * FIRST.length)] + " " + SECOND[Math.floor(Math.random() * SECOND.length)];
+    document.getElementById("name").textContent = "You made " + name + ". It's yours.";
+    glow = 1;
+  }
+});
+document.getElementById("undo").onclick = () => { path.pop(); glow = 0; };
+document.getElementById("fresh").onclick = newSky;
+
+function draw(now) {
+  const sky = ctx.createLinearGradient(0, 0, 0, cv.height);
+  sky.addColorStop(0, "#2A2540"); sky.addColorStop(1, "#4A4170");
+  ctx.fillStyle = sky; ctx.fillRect(0, 0, cv.width, cv.height);
+  for (const [x, y, a] of dust) { ctx.fillStyle = `rgba(255,255,255,${0.15 + a * 0.3})`; ctx.fillRect(x, y, 1.3, 1.3); }
+  if (path.length > 1) {
+    ctx.strokeStyle = glow ? PALETTE[0] : "rgba(232,226,247,0.7)"; ctx.lineWidth = glow ? 2.5 : 1.6;
+    if (glow && !REDUCED) { ctx.shadowColor = PALETTE[0]; ctx.shadowBlur = 14; }
+    ctx.beginPath(); path.forEach((i, k) => k ? ctx.lineTo(stars[i].x, stars[i].y) : ctx.moveTo(stars[i].x, stars[i].y));
+    if (path.length === stars.length) ctx.closePath();
+    ctx.stroke(); ctx.shadowBlur = 0;
+  }
+  stars.forEach((s, i) => {
+    const twinkle = REDUCED ? 1 : 0.8 + 0.2 * Math.sin(now / 600 + s.tw);
+    const on = path.includes(i), next = !on;
+    ctx.fillStyle = on ? "#ffffff" : `rgba(255,255,255,${0.55 * twinkle})`;
+    ctx.beginPath(); ctx.arc(s.x, s.y, on ? 5 : 4, 0, Math.PI * 2); ctx.fill();
+    if (next) { ctx.strokeStyle = "rgba(255,255,255,0.18)"; ctx.beginPath(); ctx.arc(s.x, s.y, 14, 0, Math.PI * 2); ctx.stroke(); }
+  });
+  requestAnimationFrame(draw);
+}
+newSky(); requestAnimationFrame(draw);
+</script>

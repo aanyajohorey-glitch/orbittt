@@ -1,0 +1,57 @@
+<!-- Orb Flow (for anxious or overwhelmed feelings)
+     A glowing orb grows as you breathe in and shrinks as you breathe out.
+     Breathing out for longer than you breathe in helps the body calm down. -->
+<h1>Orb Flow</h1>
+<p class="hint">Breathe in as the orb grows, hold gently, and breathe out slowly as it shrinks. Follow it for a few minutes.</p>
+<canvas id="orb" width="640" height="380" aria-label="A breathing orb. Breathe in for 4, hold for 2, breathe out for 6."></canvas>
+<div class="row">
+  <button id="pause">Pause</button>
+  <label class="soft"><input type="checkbox" id="slow"> Slower (5 · 2 · 7)</label>
+</div>
+<p class="soft" id="note">There's no score. Stop whenever you feel ready.</p>
+<script>
+const cv = document.getElementById("orb"), ctx = cv.getContext("2d");
+let paused = false, start = performance.now(), offset = 0;
+document.getElementById("pause").onclick = e => {
+  paused = !paused; e.target.textContent = paused ? "Continue" : "Pause";
+  if (!paused) start = performance.now() - offset;
+};
+function phases() {
+  return document.getElementById("slow").checked ? [["Breathe in", 5], ["Hold", 2], ["Breathe out", 7]]
+                                                  : [["Breathe in", 4], ["Hold", 2], ["Breathe out", 6]];
+}
+function draw(now) {
+  if (!paused) offset = now - start;
+  const p = phases(), total = p.reduce((s, x) => s + x[1], 0);
+  let t = (offset / 1000) % total, label = "", size = 0, left = 0;
+  for (const [name, secs] of p) {
+    if (t < secs) {
+      const k = t / secs, ease = 0.5 - Math.cos(Math.PI * k) / 2;
+      size = name === "Breathe in" ? ease : name === "Hold" ? 1 : 1 - ease;
+      label = name; left = Math.ceil(secs - t); break;
+    }
+    t -= secs;
+  }
+  const cx = cv.width / 2, cy = cv.height / 2, r = 60 + size * 95;
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  ctx.strokeStyle = "rgba(52,49,59,0.12)"; ctx.setLineDash([4, 6]);
+  ctx.beginPath(); ctx.arc(cx, cy, 155, 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]);
+  if (!REDUCED) {
+    const halo = ctx.createRadialGradient(cx, cy, r * 0.6, cx, cy, r * 1.6);
+    halo.addColorStop(0, PALETTE[0] + "66"); halo.addColorStop(1, PALETTE[0] + "00");
+    ctx.fillStyle = halo; ctx.beginPath(); ctx.arc(cx, cy, r * 1.6, 0, Math.PI * 2); ctx.fill();
+  }
+  const g = ctx.createRadialGradient(cx - r * 0.3, cy - r * 0.35, r * 0.1, cx, cy, r);
+  g.addColorStop(0, "#ffffff"); g.addColorStop(0.45, PALETTE[0]); g.addColorStop(1, INK);
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = "#34313B"; ctx.textAlign = "center";
+  ctx.font = "500 30px 'Cormorant Garamond', Georgia, serif";
+  ctx.fillText(paused ? "Paused" : label, cx, cy + 8);
+  ctx.font = "14px Manrope, system-ui, sans-serif"; ctx.fillStyle = "rgba(52,49,59,0.6)";
+  if (!paused) ctx.fillText(left, cx, cy + 32);
+  requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+setTimeout(() => { document.getElementById("note").textContent =
+  "That's a few minutes of slow breathing. Notice how your shoulders feel now."; }, 180000);
+</script>

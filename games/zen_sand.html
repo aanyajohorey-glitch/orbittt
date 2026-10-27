@@ -1,0 +1,62 @@
+<!-- Zen Sand Garden (for sad or tired feelings)
+     Drag to rake patterns in the sand. There are no goals and nothing to win. -->
+<h1>Zen Sand Garden</h1>
+<p class="hint">Drag your finger or mouse to rake the sand. Add a stone if you like. Smooth it and start again whenever you want.</p>
+<canvas id="sand" width="640" height="380" aria-label="A sand garden. Drag to draw raked lines."></canvas>
+<div class="row">
+  <button id="rake3">Wide rake</button>
+  <button id="rake1">Fine rake</button>
+  <button id="stone">Place a stone</button>
+  <button id="smooth">Smooth the sand</button>
+</div>
+<p class="soft" id="tip">Slow, curving lines feel calmest.</p>
+<script>
+const cv = document.getElementById("sand"), ctx = cv.getContext("2d");
+const SAND = "#EFE6D4";
+let teeth = 3, placing = false, last = null;
+
+function smooth() {
+  ctx.fillStyle = SAND; ctx.fillRect(0, 0, cv.width, cv.height);
+  for (let i = 0; i < 2600; i++) {                     // fine grains
+    ctx.fillStyle = Math.random() < 0.5 ? "rgba(160,135,95,0.10)" : "rgba(255,255,255,0.35)";
+    ctx.fillRect(Math.random() * cv.width, Math.random() * cv.height, 1.4, 1.4);
+  }
+}
+function pos(e) {
+  const r = cv.getBoundingClientRect();
+  return [(e.clientX - r.left) * cv.width / r.width, (e.clientY - r.top) * cv.height / r.height];
+}
+function stoneAt(x, y) {
+  for (let k = 0; k < 4; k++) {                         // ripples around the stone
+    ctx.strokeStyle = "rgba(150,125,90,0.25)"; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.arc(x, y, 30 + k * 12, 0, Math.PI * 2); ctx.stroke();
+  }
+  const g = ctx.createRadialGradient(x - 8, y - 10, 3, x, y, 26);
+  g.addColorStop(0, "#9A93A6"); g.addColorStop(1, "#5E5868");
+  ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(x, y, 26, 20, 0.3, 0, Math.PI * 2); ctx.fill();
+}
+function rake(a, b) {
+  const dx = b[0] - a[0], dy = b[1] - a[1], len = Math.hypot(dx, dy) || 1;
+  const nx = -dy / len, ny = dx / len, gap = teeth === 1 ? 0 : 9;
+  for (let i = 0; i < teeth; i++) {
+    const off = (i - (teeth - 1) / 2) * gap;
+    ctx.lineCap = "round";
+    ctx.strokeStyle = "rgba(150,125,90,0.32)"; ctx.lineWidth = 4;
+    ctx.beginPath(); ctx.moveTo(a[0] + nx * off, a[1] + ny * off); ctx.lineTo(b[0] + nx * off, b[1] + ny * off); ctx.stroke();
+    ctx.strokeStyle = "rgba(255,255,255,0.55)"; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(a[0] + nx * (off + 2), a[1] + ny * (off + 2)); ctx.lineTo(b[0] + nx * (off + 2), b[1] + ny * (off + 2)); ctx.stroke();
+  }
+}
+cv.addEventListener("pointerdown", e => {
+  const p = pos(e);
+  if (placing) { stoneAt(...p); placing = false; document.getElementById("tip").textContent = "Rake around your stone."; return; }
+  last = p; cv.setPointerCapture(e.pointerId);
+});
+cv.addEventListener("pointermove", e => { if (!last) return; const p = pos(e); rake(last, p); last = p; });
+cv.addEventListener("pointerup", () => { last = null; });
+document.getElementById("rake3").onclick = () => { teeth = 3; };
+document.getElementById("rake1").onclick = () => { teeth = 1; };
+document.getElementById("stone").onclick = () => { placing = true; document.getElementById("tip").textContent = "Tap the sand to place a stone."; };
+document.getElementById("smooth").onclick = smooth;
+smooth();
+</script>

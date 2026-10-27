@@ -1,0 +1,89 @@
+<!-- Pop the Worry (for anxious feelings)
+     Type a worry, it becomes a bubble, then pop it. The words stay in this
+     game only: they are never saved or sent anywhere. -->
+<h1>Pop the Worry</h1>
+<p class="hint">Type a worry and turn it into a bubble. Watch it float for a moment, then tap it to let it go.</p>
+<div class="row">
+  <input id="worry" type="text" maxlength="60" placeholder="e.g. what if I forget everything in the exam">
+  <button class="primary" id="make">Make a bubble</button>
+</div>
+<canvas id="sky" width="640" height="360" aria-label="Bubbles with your worries. Tap a bubble to pop it."></canvas>
+<p class="soft" id="msg">Nothing you type here is saved.</p>
+<script>
+const cv = document.getElementById("sky"), ctx = cv.getContext("2d");
+const bubbles = [], bits = [];
+const kind = ["Let it float away.", "You don't have to carry that right now.", "That worry is smaller now.",
+              "Breathe out as it goes.", "Gone, for now. You can always come back."];
+let popped = 0;
+
+function addBubble(text) {
+  const r = Math.min(110, 46 + text.length * 1.3);
+  bubbles.push({text, r, x: r + 10 + Math.random() * (cv.width - 2 * r - 20), y: cv.height - r * 0.6,
+                vx: (Math.random() - 0.5) * 0.3, vy: -(0.8 + Math.random() * 0.4), t: Math.random() * 6});
+}
+document.getElementById("make").onclick = () => {
+  const box = document.getElementById("worry");
+  const text = box.value.trim() || "that worry";
+  addBubble(text); box.value = ""; box.focus();
+};
+document.getElementById("worry").addEventListener("keydown", e => { if (e.key === "Enter") document.getElementById("make").click(); });
+
+function point(e) {
+  const r = cv.getBoundingClientRect();
+  return [(e.clientX - r.left) * cv.width / r.width, (e.clientY - r.top) * cv.height / r.height];
+}
+cv.addEventListener("pointerdown", e => {
+  const [x, y] = point(e);
+  for (let i = bubbles.length - 1; i >= 0; i--) {
+    const b = bubbles[i];
+    if (Math.hypot(b.x - x, b.y - y) < b.r) {
+      bubbles.splice(i, 1);
+      if (!REDUCED) for (let k = 0; k < 18; k++) {
+        const a = Math.random() * Math.PI * 2, s = 1 + Math.random() * 3;
+        bits.push({x: b.x, y: b.y, vx: Math.cos(a) * s, vy: Math.sin(a) * s, life: 1});
+      }
+      document.getElementById("msg").textContent = kind[popped++ % kind.length];
+      return;
+    }
+  }
+});
+
+function wrap(text, width) {
+  const words = text.split(" "), lines = [];
+  let line = "";
+  for (const w of words) {
+    const test = line ? line + " " + w : w;
+    if (ctx.measureText(test).width > width && line) { lines.push(line); line = w; } else line = test;
+  }
+  lines.push(line);
+  return lines.slice(0, 4);
+}
+function draw() {
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  for (const b of bubbles) {
+    b.t += 0.02;
+    const speed = REDUCED ? 0.4 : 1;
+    b.x += (b.vx + Math.sin(b.t) * 0.15) * speed;
+    b.x = Math.min(cv.width - b.r, Math.max(b.r, b.x));          // stay inside the sky
+    b.y = Math.max(b.r + 6, b.y + b.vy * speed);        // floats up, then waits near the top
+    const g = ctx.createRadialGradient(b.x - b.r * 0.35, b.y - b.r * 0.4, b.r * 0.1, b.x, b.y, b.r);
+    g.addColorStop(0, "rgba(255,255,255,0.95)");
+    g.addColorStop(0.6, PALETTE[0] + "88");
+    g.addColorStop(1, PALETTE[1] + "cc");
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = "rgba(255,255,255,0.9)"; ctx.lineWidth = 2; ctx.stroke();
+    ctx.fillStyle = "#34313B"; ctx.font = "15px Manrope, system-ui, sans-serif"; ctx.textAlign = "center";
+    const lines = wrap(b.text, b.r * 1.5);
+    lines.forEach((l, i) => ctx.fillText(l, b.x, b.y + (i - (lines.length - 1) / 2) * 18 + 5));
+  }
+  for (let i = bits.length - 1; i >= 0; i--) {
+    const p = bits[i];
+    p.x += p.vx; p.y += p.vy; p.life -= 0.025;
+    if (p.life <= 0) { bits.splice(i, 1); continue; }
+    ctx.fillStyle = `rgba(255,255,255,${p.life})`;
+    ctx.beginPath(); ctx.arc(p.x, p.y, 3 * p.life + 1, 0, Math.PI * 2); ctx.fill();
+  }
+  requestAnimationFrame(draw);
+}
+draw();
+</script>

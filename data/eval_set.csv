@@ -1,0 +1,71 @@
+text,expected,language
+"I finally cleared the entrance exam, I can't stop smiling!",Joy,en
+"We won the inter-school debate today, best feeling ever.",Joy,en
+Got my results and I did so much better than I expected.,Joy,en
+So relieved the board exams are finally over.,Joy,en
+Laughed so hard with my friends at lunch today.,Joy,en
+I'm really proud of the painting I finished this weekend.,Joy,en
+Super excited for the school trip to Manali next week!,Joy,en
+"I love my little sister so much, she always makes me feel better.",Warmth,en
+Thank you to my teacher for believing in me when I didn't.,Warmth,en
+I really admire how hard my dad works for our family.,Warmth,en
+I'm so grateful for my friends who stayed with me this year.,Warmth,en
+I just want to hug my grandmother right now.,Warmth,en
+My best friend remembered my birthday and I feel so loved.,Warmth,en
+I care about my friend a lot and want her to be okay.,Warmth,en
+I miss my best friend since she moved to another city.,Sadness,en
+I failed my chemistry test and I feel really low.,Sadness,en
+Nobody sat with me at lunch today and it hurt.,Sadness,en
+I'm so disappointed I didn't get selected for the team.,Sadness,en
+Our dog died last week and the house feels empty.,Sadness,en
+I regret shouting at my mom this morning.,Sadness,en
+I feel sad and tired of everything lately.,Sadness,en
+I'm terrified about the board exam results next week.,Fear,en
+"My heart is racing, I have a presentation in front of the whole class.",Fear,en
+I'm really nervous about the interview tomorrow.,Fear,en
+I'm scared I won't get into any good college.,Fear,en
+"I tripped on stage and everyone saw, it was so embarrassing.",Fear,en
+What if I forget everything during the exam?,Fear,en
+I'm worried my parents will be angry about my marks.,Fear,en
+I'm so angry that my group project partner did nothing.,Anger,en
+My brother broke my headphones and I'm furious.,Anger,en
+It's so annoying when people talk during the movie.,Anger,en
+"That's so unfair, the teacher blamed me for something I didn't do.",Anger,en
+I hate how they make fun of my accent.,Anger,en
+"Ugh, the wifi stopped working again right before my online test.",Anger,en
+That comment was disgusting and rude.,Anger,en
+I wonder how black holes actually bend time.,Wonder,en
+"Wait, so the answer was right in front of me all along?",Wonder,en
+I don't understand why my friend suddenly stopped talking to me.,Wonder,en
+I'm curious about what studying abroad would be like.,Wonder,en
+"Whoa, I didn't expect the ending of that book at all!",Wonder,en
+I just realised I've been studying the wrong chapter.,Wonder,en
+I'm confused about which stream to choose after school.,Wonder,en
+I have a maths class at 9 tomorrow.,Neutral,en
+We had rice and dal for dinner.,Neutral,en
+The school bus was on time today.,Neutral,en
+I need to buy a new notebook.,Neutral,en
+It rained in the afternoon.,Neutral,en
+My exam is on Monday.,Neutral,en
+I watched some TV and went to sleep.,Neutral,en
+aaj bahut maza aa gaya dosto ke saath,Joy,hinglish
+main bahut khush hoon aaj result aa gaya,Joy,hinglish
+mummy se bahut pyaar hai mujhe,Warmth,hinglish
+shukriya yaar tum hamesha saath ho,Warmth,hinglish
+dadi ki bahut yaad aa rahi hai,Sadness,hinglish
+aaj mood bahut kharab hai yaar,Sadness,hinglish
+mujhe exam se bahut darr lag raha hai,Fear,hinglish
+kal presentation hai aur bahut ghabrahat ho rahi hai,Fear,hinglish
+yaar mujhe bahut gussa aa raha hai,Anger,hinglish
+"bhai ne mera phone tod diya, bahut gussa hai",Anger,hinglish
+mujhe kuch samajh nahi aa raha kya karun,Wonder,hinglish
+"yeh kaise hua, main hairaan hoon",Wonder,hinglish
+kal school jaana hai,Neutral,hinglish
+aaj ghar pe khana khaya,Neutral,hinglish
+मैं आज बहुत खुश हूँ,Joy,hindi
+मुझे अपनी माँ से बहुत प्यार है,Warmth,hindi
+मैं आज बहुत उदास हूँ,Sadness,hindi
+मुझे परीक्षा से बहुत डर लग रहा है,Fear,hindi
+मुझे बहुत गुस्सा आ रहा है,Anger,hindi
+मुझे कुछ समझ नहीं आ रहा,Wonder,hindi
+कल मेरा स्कूल है,Neutral,hindi

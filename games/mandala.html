@@ -1,0 +1,48 @@
+<!-- Mandala Colouring (for stressed feelings)
+     Pick a colour from your feeling's palette and tap a shape to colour it. -->
+<h1>Mandala Colouring</h1>
+<p class="hint">Choose a colour, then tap the shapes to fill them in. Repetitive colouring can quiet a busy mind.</p>
+<div class="row" id="swatches"></div>
+<div class="stage" style="display:flex;justify-content:center;padding:10px">
+  <svg id="m" viewBox="-200 -200 400 400" width="360" height="360" role="img" aria-label="A mandala to colour"></svg>
+</div>
+<div class="row"><button id="clear">Start again</button></div>
+<p class="soft">There's no right way to colour it.</p>
+<script>
+const NS = "http://www.w3.org/2000/svg", svg = document.getElementById("m");
+const colours = PALETTE.concat([INK, "#FFFFFF"]);
+let current = colours[0];
+
+colours.forEach((c, i) => {
+  const b = document.createElement("button");
+  b.style.cssText = `width:34px;height:34px;padding:0;background:${c};border:2px solid ${i ? "#fff" : "#34313B"}`;
+  b.setAttribute("aria-label", "Colour " + (i + 1));
+  b.onclick = () => { current = c; document.querySelectorAll("#swatches button").forEach(x => x.style.borderColor = "#fff"); b.style.borderColor = "#34313B"; };
+  document.getElementById("swatches").appendChild(b);
+});
+function shape(tag, attrs) {
+  const el = document.createElementNS(NS, tag);
+  for (const k in attrs) el.setAttribute(k, attrs[k]);
+  el.setAttribute("fill", "#FFFFFF"); el.setAttribute("stroke", "#6B6773"); el.setAttribute("stroke-width", "1.2");
+  el.style.cursor = "pointer"; el.style.transition = REDUCED ? "none" : "fill .35s";
+  el.addEventListener("click", () => el.setAttribute("fill", current));
+  svg.appendChild(el);
+}
+function petal(r1, r2, width, angle) {
+  const a = angle * Math.PI / 180, w = width * Math.PI / 180;
+  const p = (r, t) => `${(r * Math.cos(t)).toFixed(1)} ${(r * Math.sin(t)).toFixed(1)}`;
+  return `M ${p(r1, a - w)} Q ${p((r1 + r2) / 2 * 1.15, a - w * 1.1)} ${p(r2, a)} Q ${p((r1 + r2) / 2 * 1.15, a + w * 1.1)} ${p(r1, a + w)} Z`;
+}
+function build() {
+  svg.innerHTML = "";
+  shape("circle", {cx: 0, cy: 0, r: 190});
+  [[150, 188, 24, 7.5], [110, 160, 16, 11.25], [70, 118, 12, 15], [36, 76, 8, 22.5]].forEach(([r1, r2, n, w], ring) => {
+    for (let i = 0; i < n; i++) shape("path", {d: petal(r1, r2, w, i * 360 / n + (ring % 2) * 180 / n)});
+  });
+  for (let i = 0; i < 8; i++) shape("circle", {cx: (58 * Math.cos(i * Math.PI / 4)).toFixed(1), cy: (58 * Math.sin(i * Math.PI / 4)).toFixed(1), r: 7});
+  shape("circle", {cx: 0, cy: 0, r: 30});
+  shape("circle", {cx: 0, cy: 0, r: 12});
+}
+document.getElementById("clear").onclick = build;
+build();
+</script>

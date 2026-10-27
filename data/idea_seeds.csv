@@ -1,0 +1,81 @@
+kind,text,valence,arousal,warmth,era,brightness,texture,tags,tile
+setting,a Mumbai rooftop at dusk,0.3,0.1,0.6,0.2,0.4,0.2,city|sunset|india|longing,#F2B880|#8E7BBF
+setting,a railway platform in the monsoon,-0.2,0.0,-0.4,-0.1,-0.3,0.5,rain|travel|india|waiting,#7F93BF|#C7D3C0
+setting,Old Delhi lanes at dawn,0.3,0.4,0.7,-0.5,0.2,0.7,old city|crowds|food|india,#E9B872|#C9A3B4
+setting,a houseboat on the Kerala backwaters,0.6,-0.6,0.4,-0.2,0.3,0.2,water|calm|green|kerala,#98AA8C|#B9C8EA
+setting,a school library after hours,0.2,-0.5,0.4,-0.2,-0.2,0.3,books|quiet|study|secret,#C9A27E|#6E5A8A
+setting,a 24-hour chai stall,0.5,0.0,0.8,-0.1,-0.4,0.6,night|tea|friendship|india,#D9A066|#34313B
+setting,a Himalayan bus stop in fog,0.0,-0.5,-0.6,-0.1,-0.1,0.3,mountain|fog|travel|waiting,#DCE5F7|#8FA3C9
+setting,a terrace on kite festival day,0.8,0.8,0.7,-0.1,0.8,0.2,festival|sky|community|india,#F6E7CC|#B9C8EA
+setting,a neon arcade at midnight,0.4,0.8,-0.4,0.4,-0.3,-0.3,neon|games|night|city,#E05FD0|#3A2E6E
+setting,an abandoned single-screen cinema,-0.3,-0.3,0.3,-0.6,-0.5,0.7,cinema|memory|dust|nostalgia,#8E5A4A|#2E2A3A
+setting,the Thar desert at night,0.1,-0.4,0.2,-0.6,-0.6,0.5,desert|stars|silence|rajasthan,#2E3A6E|#E0B27A
+setting,a lighthouse at the edge of the map,0.0,-0.2,-0.3,-0.4,0.0,0.4,sea|solitude|light|edge,#B9C8EA|#F6E7CC
+setting,a greenhouse full of strange plants,0.5,0.1,0.3,0.0,0.6,0.1,plants|growth|strange|glass,#A9C9A0|#E6F2DC
+setting,an underwater city,0.2,0.0,-0.7,0.8,0.0,-0.2,water|future|blue|wonder,#3E7CB1|#9BD3D0
+setting,a garden on a space station,0.6,0.1,0.0,1.0,0.5,-0.4,space|future|plants|hope,#1F2A44|#9FD8A9
+setting,the top berth of a night train,0.1,-0.4,0.3,-0.2,-0.5,0.4,travel|night|strangers|india,#3E3B5C|#D9A066
+setting,a wedding kitchen at midnight,0.6,0.7,0.9,-0.2,0.2,0.6,food|family|chaos|celebration,#E8A33D|#B8425A
+setting,a laundromat at 2 a.m.,0.0,-0.3,-0.2,0.2,0.0,0.0,night|city|quiet|strangers,#B9E1E6|#F7F2E8
+setting,a street flooded after rain,0.1,0.2,-0.4,0.0,0.1,0.6,rain|reflection|city|play,#7F93BF|#E3E9F5
+setting,a hostel room the night before exams,-0.3,0.6,0.1,0.1,-0.2,0.4,exams|friends|stress|youth,#6E5A8A|#F2D27A
+setting,a bookshop with a sleepy cat,0.6,-0.6,0.6,-0.3,0.3,0.4,books|cat|cosy|calm,#C9A27E|#F2E3D0
+setting,a temple courtyard at dawn,0.5,-0.5,0.6,-0.8,0.4,0.5,ritual|bells|sunrise|india,#F2C14E|#E9E1D3
+setting,a Ferris wheel at a village mela,0.7,0.6,0.7,-0.3,0.5,0.4,fair|lights|childhood|india,#E35D6A|#F4D35E
+setting,a metro carriage at rush hour,-0.1,0.7,0.0,0.4,0.3,0.0,city|crowds|commute|strangers,#9AA5B1|#F2C14E
+setting,a mountain observatory,0.5,-0.2,-0.5,0.4,-0.6,-0.2,stars|science|wonder|night,#1E2240|#C9B9E8
+setting,a small-town video rental shop,0.3,0.1,0.5,-0.4,0.0,0.6,nostalgia|film|youth|small town,#D96C5F|#3B6EA5
+setting,a Goa beach out of season,0.2,-0.4,0.3,0.0,0.4,0.3,sea|quiet|melancholy|sun,#F2D6A2|#7FB7BE
+setting,a forgotten museum,-0.2,-0.4,0.1,-0.7,-0.3,0.6,history|dust|secret|objects,#8C7A6B|#D8CFC4
+setting,a grandmother's kitchen,0.6,0.0,0.9,-0.5,0.3,0.6,family|food|memory|warm,#E3A857|#F5E6C8
+setting,a tea estate in Darjeeling mist,0.4,-0.6,-0.1,-0.3,0.2,0.2,hills|tea|fog|calm,#98AA8C|#E2EADC
+contrast,lonely + warm,-0.1,-0.3,0.6,0,0,0,loneliness|comfort,
+contrast,calm + chaos,0.0,0.4,0.0,0,0,0.3,calm|chaos,
+contrast,tiny + infinite,0.4,0.0,-0.2,0,0,0,scale|wonder,
+contrast,old + new,0.2,0.1,0.2,0,0,0.2,time|change,
+contrast,loud + tender,0.3,0.5,0.5,0,0,0.2,noise|gentleness,
+contrast,fragile + fierce,0.1,0.5,0.3,0,0,0.3,strength|vulnerability,
+contrast,ordinary + magical,0.5,0.2,0.3,0,0,0,everyday|magic,
+contrast,joyful + bittersweet,0.2,0.2,0.4,0,0,0,joy|loss,
+contrast,strict + playful,0.3,0.4,0.1,0,0,-0.1,rules|play,
+contrast,dark + hopeful,0.1,0.0,0.0,0,-0.3,0.2,darkness|hope,
+contrast,fast + still,0.1,0.3,-0.1,0,0,0,speed|stillness,
+contrast,together + alone,0.0,0.0,0.3,0,0,0,belonging|solitude,
+contrast,soft + sharp,0.1,0.2,0.0,0,0,0.4,softness|edges,
+contrast,rich + empty,-0.1,0.0,0.2,0,0,0.2,abundance|absence,
+contrast,brave + scared,0.0,0.6,0.2,0,0,0.2,courage|fear,
+contrast,home + far away,0.1,-0.1,0.5,0,0,0,home|distance,
+contrast,real + dreamt,0.2,-0.2,0.0,0,0,-0.2,reality|dreams,
+contrast,silence + music,0.3,0.1,0.2,0,0,0,silence|music,
+contrast,rigid + wild,0.2,0.6,0.1,0,0,0.4,order|freedom,
+contrast,ancient + digital,0.1,0.3,-0.1,0,0,0,tradition|technology,
+texture,film grain,0.0,-0.1,0.3,-0.4,0.0,0.6,film|grain|nostalgia,
+texture,watercolour wash,0.4,-0.5,0.2,-0.2,0.3,0.2,soft|painterly|wash,
+texture,risograph print,0.4,0.4,0.3,0.1,0.3,0.6,print|grain|zine,
+texture,chalk on blackboard,0.1,0.0,0.0,-0.2,-0.4,0.7,school|dust|hand-made,
+texture,linen and cotton,0.4,-0.6,0.4,-0.1,0.4,0.4,fabric|calm|home,
+texture,glossy chrome,0.3,0.6,-0.6,0.8,0.4,-0.9,shine|future|tech,
+texture,crumpled paper,-0.1,0.0,0.2,-0.2,0.2,0.8,paper|imperfect|notes,
+texture,neon glow,0.4,0.8,-0.3,0.6,-0.2,-0.4,neon|night|city,
+texture,wood grain,0.4,-0.3,0.7,-0.4,0.2,0.6,wood|natural|warm,
+texture,velvet,0.3,-0.2,0.6,-0.3,-0.3,0.2,luxury|soft|deep,
+texture,rain on glass,-0.1,-0.3,-0.5,0.0,-0.1,0.3,rain|blur|reflection,
+texture,embroidery thread,0.5,0.0,0.7,-0.6,0.3,0.7,craft|india|hand-made,
+texture,clay and terracotta,0.4,-0.1,0.8,-0.7,0.2,0.8,earth|craft|warm,
+texture,pixels,0.4,0.6,-0.4,0.6,0.3,-0.2,digital|games|retro,
+texture,smoke and haze,-0.2,-0.3,-0.1,0.0,-0.3,0.2,mystery|soft|dreamy,
+structure,a journey there and back,0.3,0.4,0.2,0,0,0,journey|change,
+structure,one place hour by hour,0.2,-0.2,0.2,0,0,0,time|place,
+structure,a mystery slowly revealed,0.0,0.3,-0.1,0,0,0,mystery|reveal,
+structure,two worlds that collide,0.1,0.6,0.0,0,0,0,collision|change,
+structure,a promise kept against the odds,0.5,0.5,0.4,0,0,0,promise|courage,
+structure,a letter that was never sent,-0.3,-0.4,0.4,0,0,0,letter|memory,
+structure,a ritual that slowly changes,0.2,-0.2,0.4,0,0,0,ritual|change,
+structure,a race against a ticking clock,0.0,0.8,0.0,0,0,0,urgency|time,
+structure,a found object that unlocks a memory,0.1,-0.2,0.4,0,0,0,object|memory,
+structure,an outsider who finds a home,0.4,0.1,0.6,0,0,0,belonging|home,
+structure,a rule that gets broken,0.2,0.6,0.0,0,0,0,rules|rebellion,
+structure,a reverse timeline,0.0,0.1,0.0,0,0,0,time|reveal,
+structure,one moment seen by three people,0.1,0.1,0.1,0,0,0,perspective|people,
+structure,a small act that ripples outward,0.5,0.2,0.5,0,0,0,kindness|change,
+structure,a goodbye that becomes a beginning,0.2,0.0,0.4,0,0,0,goodbye|beginning,

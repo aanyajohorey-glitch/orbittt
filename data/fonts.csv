@@ -1,0 +1,33 @@
+family,category,use,vintage,bold,energy,warmth,tags
+Cormorant Garamond,serif,heading,0.5,-0.5,-0.6,0.2,elegant|calm|literary|romantic
+Playfair Display,serif,heading,0.5,0.3,0.0,0.1,editorial|classic|elegant|fashion
+DM Serif Display,serif,heading,0.6,0.2,-0.1,0.3,retro|soft|warm|editorial
+Fraunces,serif,heading,0.7,0.2,0.1,0.6,warm|bookish|quirky|vintage
+Lora,serif,both,0.3,-0.4,-0.3,0.4,cosy|literary|friendly
+Libre Baskerville,serif,both,0.6,-0.2,-0.4,0.2,classic|literary|calm
+Merriweather,serif,body,0.2,0.0,-0.2,0.2,readable|steady|literary
+EB Garamond,serif,both,0.8,-0.4,-0.5,0.3,classic|literary|historic|calm
+Abril Fatface,serif,heading,0.7,0.9,0.5,0.4,bold|retro|poster|fashion
+Bodoni Moda,serif,heading,0.6,0.5,0.1,-0.1,fashion|luxury|editorial|dramatic
+Yeseva One,serif,heading,0.5,0.6,0.2,0.5,romantic|bold|feminine
+Tiro Devanagari Hindi,serif,both,0.6,-0.1,-0.2,0.4,devanagari|literary|indian|warm
+Inter,sans,body,-0.6,0.0,0.0,-0.2,clean|neutral|modern|tech
+Manrope,sans,body,-0.5,-0.2,-0.1,0.0,clean|soft|modern|friendly
+Work Sans,sans,both,-0.3,0.0,0.0,0.1,friendly|clean|warm
+DM Sans,sans,body,-0.4,-0.1,0.0,0.1,soft|clean|friendly
+Nunito,sans,body,-0.2,-0.5,0.0,0.5,rounded|cosy|friendly|playful
+Quicksand,sans,body,-0.3,-0.7,-0.1,0.4,rounded|gentle|soft|playful
+Poppins,sans,both,-0.4,0.3,0.3,0.1,geometric|modern|friendly|bold
+Montserrat,sans,both,-0.2,0.4,0.3,0.0,geometric|urban|bold|modern
+Space Grotesk,sans,both,-0.8,0.2,0.3,-0.4,tech|futuristic|quirky|modern
+Syne,sans,heading,-0.7,0.7,0.6,-0.1,experimental|art|playful|bold
+Archivo Black,sans,heading,-0.3,1.0,0.7,0.0,loud|poster|bold|urban
+Bebas Neue,sans,heading,-0.3,1.0,0.8,-0.1,loud|poster|film|bold
+Oswald,sans,heading,-0.1,0.7,0.6,-0.1,condensed|urban|news|bold
+Mukta,sans,body,-0.3,0.0,0.0,0.2,devanagari|clean|indian|readable
+Lexend,sans,body,-0.5,-0.1,0.0,0.0,readable|accessible|clean|modern
+Caveat,script,heading,0.2,-0.6,0.1,0.6,handwritten|personal|journal|gentle
+Pacifico,script,heading,0.4,0.4,0.6,0.7,retro|beach|playful|warm
+Dancing Script,script,heading,0.4,-0.2,0.2,0.6,romantic|handwritten|gentle
+Special Elite,mono,heading,0.9,0.2,0.0,0.3,typewriter|vintage|zine|grunge
+Space Mono,mono,both,-0.6,0.2,0.2,-0.4,tech|retro-futurist|code|zine

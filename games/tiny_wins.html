@@ -1,0 +1,55 @@
+<!-- Tiny Wins Quest (for low energy)
+     Tiny one-minute tasks. Each one you do helps a small planet grow.
+     There's no streak and no score: one tiny win is already enough. -->
+<h1>Tiny Wins Quest</h1>
+<p class="hint">Pick one tiny task. A gentle one-minute timer keeps you company. Each win helps your planet grow.</p>
+<div class="stage" style="padding:14px;display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:14px;align-items:center">
+  <div id="tasks" class="row" style="justify-content:flex-start"></div>
+  <canvas id="planet" width="180" height="180" style="border:none;box-shadow:none;background:transparent"></canvas>
+</div>
+<p class="soft" id="msg">One tiny thing is enough. Skip anything that doesn't feel right.</p>
+<script>
+const TASKS = ["Drink a glass of water", "Stretch your arms up high", "Open a window for fresh air",
+  "Tidy one small thing", "Wash your face", "Step outside for a minute", "Send someone a kind hello",
+  "Put on a song you like", "Sit up and roll your shoulders"];
+const box = document.getElementById("tasks"), cv = document.getElementById("planet"), ctx = cv.getContext("2d");
+let wins = 0, size = 26, timer = null;
+
+TASKS.forEach(task => {
+  const b = document.createElement("button"); b.textContent = task;
+  b.onclick = () => startTask(b, task);
+  box.appendChild(b);
+});
+function startTask(button, task) {
+  if (timer) return;
+  let left = 60;
+  button.classList.add("primary");
+  document.getElementById("msg").textContent = task + "… " + left + "s (tap the task again when you're done)";
+  const finish = () => {
+    clearInterval(timer); timer = null; wins += 1; button.disabled = true;
+    button.textContent = "✓ " + task;
+    document.getElementById("msg").textContent = wins === 1 ? "A tiny win. That counts." : "Another tiny win. Your planet grew.";
+  };
+  button.onclick = finish;
+  timer = setInterval(() => {
+    left -= 1;
+    if (left <= 0) finish();
+    else document.getElementById("msg").textContent = task + "… " + left + "s (tap the task again when you're done)";
+  }, 1000);
+}
+function draw(now) {
+  const target = Math.min(78, 26 + wins * 9);
+  size += (target - size) * (REDUCED ? 1 : 0.06);
+  ctx.clearRect(0, 0, 180, 180);
+  const g = ctx.createRadialGradient(90 - size * 0.35, 90 - size * 0.4, size * 0.1, 90, 90, size);
+  g.addColorStop(0, "#ffffff"); g.addColorStop(0.4, PALETTE[0]); g.addColorStop(1, INK);
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(90, 90, size, 0, Math.PI * 2); ctx.fill();
+  for (let i = 0; i < Math.min(wins, 6); i++) {             // a sparkle for each win
+    const a = i * 1.05 + (REDUCED ? 0 : now / 3000);
+    ctx.fillStyle = "#fff"; ctx.beginPath();
+    ctx.arc(90 + Math.cos(a) * (size + 10), 90 + Math.sin(a) * (size + 10), 3, 0, Math.PI * 2); ctx.fill();
+  }
+  requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+</script>

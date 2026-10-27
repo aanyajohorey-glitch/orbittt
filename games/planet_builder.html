@@ -1,0 +1,61 @@
+<!-- Planet Builder (for sad or low feelings)
+     Each good thing you add, however small, helps a little planet grow:
+     it gets bigger, gains colour bands, a ring and moons. Nothing is saved. -->
+<h1>Planet Builder</h1>
+<p class="hint">Add one good thing, however small (a song you liked, a kind word, a warm meal). Watch your planet grow.</p>
+<div class="row">
+  <input id="good" type="text" maxlength="50" placeholder="e.g. my friend made me laugh">
+  <button class="primary" id="add">Add to my planet</button>
+</div>
+<canvas id="space" width="640" height="360" aria-label="Your planet. It grows with every good thing you add."></canvas>
+<p class="soft" id="msg">Small things count. Nothing here is saved.</p>
+<script>
+const cv = document.getElementById("space"), ctx = cv.getContext("2d");
+const goods = [], cheer = ["That's worth keeping.", "Your planet is glowing a little brighter.",
+  "Look at it grow.", "Small good things add up.", "A whole world, built from good moments."];
+let size = 40, target = 40;
+
+document.getElementById("add").onclick = () => {
+  const box = document.getElementById("good"), text = box.value.trim();
+  if (!text) { box.focus(); return; }
+  goods.push({text, a: Math.random() * Math.PI * 2});
+  target = Math.min(120, 40 + goods.length * 12);
+  document.getElementById("msg").textContent = cheer[Math.min(goods.length - 1, cheer.length - 1)];
+  box.value = ""; box.focus();
+};
+document.getElementById("good").addEventListener("keydown", e => { if (e.key === "Enter") document.getElementById("add").click(); });
+
+function draw(now) {
+  size += (target - size) * (REDUCED ? 1 : 0.05);
+  const cx = cv.width / 2, cy = cv.height / 2 + 10;
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  const n = goods.length;
+  if (n >= 3) {                                            // ring (back half)
+    ctx.strokeStyle = "rgba(255,255,255,0.8)"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.ellipse(cx, cy, size * 1.7, size * 0.38, -0.25, Math.PI, Math.PI * 2); ctx.stroke();
+  }
+  const g = ctx.createRadialGradient(cx - size * 0.35, cy - size * 0.4, size * 0.1, cx, cy, size);
+  g.addColorStop(0, "#ffffff"); g.addColorStop(0.35, PALETTE[0]); g.addColorStop(1, INK);
+  ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, size, 0, Math.PI * 2); ctx.fill();
+  ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, size, 0, Math.PI * 2); ctx.clip();
+  for (let i = 0; i < Math.min(n, 5); i++) {               // colour bands, one per good thing
+    ctx.fillStyle = PALETTE[(i + 1) % PALETTE.length] + "55";
+    ctx.fillRect(cx - size, cy - size * 0.6 + i * size * 0.32, size * 2, size * 0.12);
+  }
+  ctx.restore();
+  if (n >= 3) {                                            // ring (front half)
+    ctx.strokeStyle = "rgba(255,255,255,0.95)"; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.ellipse(cx, cy, size * 1.7, size * 0.38, -0.25, 0, Math.PI); ctx.stroke();
+  }
+  goods.forEach((item, i) => {                             // each good thing is a little moon with its words
+    const speed = REDUCED ? 0 : 0.00012 * (1 + i % 3);
+    const a = item.a + now * speed, rx = size + 70 + (i % 3) * 22, ry = rx * 0.42;
+    const x = cx + Math.cos(a) * rx, y = cy + Math.sin(a) * ry;
+    ctx.fillStyle = "#ffffff"; ctx.beginPath(); ctx.arc(x, y, 5, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "rgba(52,49,59,0.72)"; ctx.font = "15px Manrope, system-ui, sans-serif"; ctx.textAlign = "center";
+    ctx.fillText(item.text.length > 22 ? item.text.slice(0, 21) + "…" : item.text, x, y - 10);
+  });
+  requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+</script>

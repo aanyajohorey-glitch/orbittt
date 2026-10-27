@@ -1,0 +1,99 @@
+name,field,region,language,era,valence,arousal,warmth,texture,mainstream_level,tags,known_for
+Raja Ravi Varma,painter,India,,-0.9,0.4,0.0,0.6,0.0,4,mythology|portrait|classical|romantic|ornate,oil paintings of Indian myths and portraits that became famous as printed lithographs
+Amrita Sher-Gil,painter,India,,-0.7,-0.2,-0.3,0.5,0.4,4,portrait|melancholy|earthy|modern|women,modernist paintings of everyday Indian women in quiet earthy colours
+M. F. Husain,painter,India,,-0.4,0.4,0.6,0.6,0.5,4,bold|colourful|modern|horses|energetic,bold colourful modernist paintings especially of horses
+S. H. Raza,painter,India + France,,-0.4,0.3,0.0,0.6,-0.2,3,geometric|abstract|spiritual|colour|meditative,the bindu: geometric abstraction in deep glowing colours
+V. S. Gaitonde,painter,India,,-0.5,0.0,-0.6,0.2,0.1,2,abstract|quiet|meditative|luminous|minimal,quiet luminous abstract paintings
+Jamini Roy,painter,India,,-0.7,0.5,0.0,0.7,0.1,3,folk|bold line|bengal|earthy|flat colour,Bengal folk-inspired paintings with bold outlines and flat colour
+Abanindranath Tagore,painter,India,,-0.9,0.2,-0.5,0.4,0.2,3,wash|poetic|soft|national|bengal,founded the Bengal School and its soft watercolour wash style
+Nandalal Bose,painter,India,,-0.8,0.4,-0.2,0.5,0.2,3,illustration|national|folk|bengal|ornate,Bengal School painter who illuminated the original Constitution of India
+Tyeb Mehta,painter,India,,-0.5,-0.4,0.4,0.2,-0.2,2,bold|diagonal|dramatic|figure|modern,bold flat planes cut by diagonals and falling figures
+Bhupen Khakhar,painter,India,,-0.4,0.4,0.2,0.6,0.1,2,narrative|everyday|colourful|small town|humour,colourful narrative paintings of everyday small-town life
+Arpita Singh,painter,India,,-0.3,0.1,0.3,0.4,0.3,2,dreamlike|figures|text|story|women,dreamlike paintings crowded with figures and words
+Jangarh Singh Shyam,Gond artist,India (Madhya Pradesh),,-0.6,0.6,0.3,0.6,0.2,2,folk|nature|dots|animals|story,brought Gond painting from village walls to paper and canvas
+Bhajju Shyam,Gond artist and illustrator,India (Madhya Pradesh),,-0.2,0.6,0.3,0.6,0.2,2,folk|illustration|story|animals|playful,Gond artist who illustrated The London Jungle Book
+Ganga Devi,Madhubani artist,India (Bihar),,-0.7,0.4,0.3,0.7,0.0,2,folk|pattern|bold line|story|women,celebrated Madhubani painter of detailed line work
+Sita Devi,Madhubani artist,India (Bihar),,-0.7,0.6,0.4,0.8,0.0,2,folk|pattern|colourful|mythology|women,celebrated Madhubani painter known for bright colourful figures
+Jivya Soma Mashe,Warli artist,India (Maharashtra),,-0.7,0.5,0.2,0.5,0.4,2,folk|minimal|community|dance|earthy,brought Warli painting to the wider world
+Satyajit Ray,filmmaker,India,Bengali,-0.6,0.1,-0.4,0.4,0.3,4,film|realism|childhood|poetic|black and white,Pather Panchali and the Apu trilogy; he also designed his own posters
+Ritwik Ghatak,filmmaker,India,Bengali,-0.6,-0.6,0.4,0.2,0.5,2,film|partition|melodrama|loss|intense,Meghe Dhaka Tara and films about Partition and displacement
+Guru Dutt,filmmaker,India,Hindi,-0.7,-0.5,0.0,0.2,0.3,3,film|black and white|longing|poetic|light and shadow,Pyaasa and Kaagaz Ke Phool with dramatic black-and-white lighting
+Mani Ratnam,filmmaker,India,Tamil,-0.1,0.4,0.5,0.6,0.0,4,film|music|romance|lush|colour,Roja and Bombay with lush musical visuals
+Adoor Gopalakrishnan,filmmaker,India,Malayalam,-0.4,-0.2,-0.6,0.3,0.3,2,film|quiet|observational|kerala|slow,Elippathayam and other quiet observant films
+Zoya Akhtar,filmmaker,India,Hindi,0.3,0.6,0.5,0.6,0.0,4,film|friendship|journey|urban|music,Zindagi Na Milegi Dobara and Gully Boy
+Imtiaz Ali,filmmaker,India,Hindi,0.2,0.2,0.4,0.6,0.2,4,film|journey|longing|romance|music,Jab We Met and Rockstar: journeys and longing
+Payal Kapadia,filmmaker,India,Malayalam + Hindi,0.4,0.0,-0.5,0.3,0.4,2,film|night|city|women|poetic,All We Imagine as Light (Grand Prix at Cannes 2024)
+Vetrimaaran,filmmaker,India,Tamil,0.2,-0.5,0.6,0.1,0.7,3,film|raw|political|intense|realism,Visaranai and Asuran: raw political cinema
+Lijo Jose Pellissery,filmmaker,India,Malayalam,0.3,0.1,0.9,0.3,0.7,2,film|wild|kinetic|chaos|kerala,Jallikattu and other wild kinetic films
+Raghu Rai,photographer,India,,-0.3,0.2,0.3,0.4,0.4,3,photography|street|documentary|india|crowds,decades of photographs of Indian life and history
+Dayanita Singh,photographer,India,,0.0,-0.1,-0.5,0.0,0.3,2,photography|black and white|archive|books|quiet,photo-books and portable museums of black-and-white images
+Homai Vyarawalla,photographer,India,,-0.7,0.3,0.0,0.2,0.3,2,photography|history|documentary|black and white,India's first woman photojournalist
+Sabyasachi Mukherjee,fashion designer,India,,0.0,0.4,0.2,0.8,0.4,4,fashion|heritage|ornate|bridal|luxury,rich heritage-inspired Indian bridalwear
+Ritu Kumar,fashion designer,India,,-0.2,0.5,0.1,0.7,0.3,3,fashion|textile|craft|print|heritage,revived traditional Indian prints and crafts in fashion
+Priya Kuriyan,illustrator,India,,0.4,0.7,0.3,0.6,0.1,2,illustration|children|humour|warm|everyday,warm funny illustrations for Indian children's books
+Shilo Shiv Suleman,artist,India,,0.7,0.5,0.2,0.6,0.0,2,installation|light|interactive|activism|magical,interactive light installations and the Fearless Collective murals
+Sarnath Banerjee,graphic novelist,India,English,0.4,0.2,0.2,0.3,0.4,2,graphic novel|urban|humour|city|comics,"Corridor, one of India's first graphic novels"
+Orijit Sen,graphic artist,India,English,0.2,0.1,0.2,0.4,0.4,1,graphic novel|river|environment|comics|folk,"The River of Stories, an early Indian graphic novel"
+Gulzar,poet and lyricist,India,Hindi + Urdu,-0.2,0.0,-0.4,0.5,0.0,4,poetry|lyrics|longing|gentle|film,poetic film lyrics and films like Ijaazat
+Rabindranath Tagore,poet painter and composer,India,Bengali,-0.9,0.4,-0.3,0.5,0.1,5,poetry|music|nature|spiritual|bengal,Gitanjali; wrote the national anthems of India and Bangladesh
+Amrita Pritam,poet and novelist,India,Punjabi,-0.6,-0.6,0.0,0.4,0.2,3,poetry|partition|women|longing|punjab,"Ajj Aakhaan Waris Shah Nu, a poem on Partition"
+Mahasweta Devi,writer,India,Bengali,-0.4,-0.4,0.3,0.2,0.6,2,fiction|tribal|justice|raw|activism,fiction about tribal and marginalised communities
+Arundhati Roy,writer,India,English,0.0,-0.2,0.2,0.5,0.3,4,fiction|kerala|childhood|lyrical|loss,The God of Small Things
+Teejan Bai,folk performer,India (Chhattisgarh),Chhattisgarhi,-0.6,0.4,0.9,0.6,0.6,2,folk|performance|epic|powerful|story,Pandavani: a dramatic folk telling of the Mahabharata
+Bhupen Hazarika,singer and composer,India (Assam),Assamese,-0.6,0.2,-0.2,0.5,0.2,3,music|river|humanity|folk|ballad,songs about rivers and humanity such as Bistirno Parore
+Shubha Mudgal,singer,India,Hindi,-0.1,0.4,0.3,0.5,0.2,2,music|hindustani|fusion|voice|pop,Hindustani classical singing and Indian pop
+A. R. Rahman,composer,India,Tamil + Hindi,0.1,0.5,0.5,0.6,0.0,5,music|film|fusion|electronic|spiritual,film scores blending Indian melody with electronic sound
+Ilaiyaraaja,composer,India,Tamil,-0.5,0.5,0.3,0.7,0.1,4,music|film|folk|orchestral|melody,melodic film scores mixing folk and Western classical
+Prateek Kuhad,musician,India,English + Hindi,0.3,0.2,-0.5,0.5,-0.2,3,music|indie|acoustic|love|intimate,intimate indie folk songs
+Ritviz,musician,India,Hindi,0.6,0.8,0.8,0.6,0.0,3,music|electronic|dance|indian melody|celebration,electronic dance music built on Indian melodies
+Indian Ocean,band,India,Hindi,-0.2,0.3,0.4,0.5,0.4,2,music|fusion|folk|rock|earthy,fusion rock built on Indian folk and classical music
+Thaikkudam Bridge,band,India (Kerala),Malayalam,0.3,0.4,0.7,0.5,0.4,2,music|fusion|carnatic|rock|kerala,rock fused with Carnatic and Malayalam folk
+Raghu Dixit,musician,India (Karnataka),Kannada,0.2,0.7,0.6,0.7,0.3,2,music|folk|rock|joyful|kannada,joyful folk rock in Kannada
+Kabir Cafe,band,India,Hindi,0.2,0.4,0.4,0.6,0.4,1,music|folk|poetry|spiritual|fusion,Kabir's poetry sung as folk fusion
+The Local Train,band,India,Hindi,0.4,0.2,0.4,0.5,0.3,3,music|indie|rock|youth|longing,Hindi indie rock
+Mame Khan,singer,India (Rajasthan),Rajasthani,-0.5,0.5,0.4,0.8,0.3,2,music|folk|desert|manganiyar|voice,Manganiyar folk singing from Rajasthan
+Hayao Miyazaki,animator and filmmaker,Japan,Japanese,-0.1,0.5,0.1,0.6,0.3,5,animation|nature|flight|whimsical|hand-drawn,Spirited Away and hand-drawn worlds of nature and flight
+Makoto Shinkai,animator,Japan,Japanese,0.4,0.3,0.2,0.4,-0.3,4,animation|sky|light|longing|city,Your Name and its luminous skies and light
+Satoshi Kon,animator,Japan,Japanese,0.0,-0.3,0.5,0.2,0.2,3,animation|dreams|surreal|identity|uncanny,Perfect Blue and Paprika where dreams blur with reality
+Wes Anderson,filmmaker,USA,English,-0.2,0.5,0.2,0.6,-0.4,4,film|symmetry|pastel|whimsical|quirky,symmetrical frames and pastel palettes
+Wong Kar-wai,filmmaker,Hong Kong,Cantonese,-0.3,-0.3,0.2,0.6,0.4,3,film|longing|neon|romance|saturated,In the Mood for Love: saturated colour and longing
+Agnès Varda,filmmaker,France,French,-0.4,0.5,0.2,0.5,0.4,3,film|playful|personal|documentary|women,Cléo from 5 to 7 and other playful personal films
+Céline Sciamma,filmmaker,France,French,0.2,0.1,-0.4,0.4,0.0,3,film|quiet|women|painterly|longing,Portrait of a Lady on Fire
+Bong Joon-ho,filmmaker,South Korea,Korean,0.4,-0.2,0.6,0.2,0.3,4,film|genre-mix|class|dark humour|tension,Parasite and other genre-mixing social stories
+Barry Jenkins,filmmaker,USA,English,0.3,0.0,-0.4,0.5,0.1,3,film|tender|colour|close-up|identity,Moonlight and its tender colour-rich close-ups
+Greta Gerwig,filmmaker,USA,English,0.4,0.6,0.3,0.6,0.0,4,film|coming of age|warm|women|humour,Lady Bird and Little Women
+Tim Burton,filmmaker,USA,English,0.0,-0.1,0.3,0.1,0.4,4,film|gothic|whimsical|dark|quirky,gothic whimsical film worlds
+Roger Deakins,cinematographer,UK,English,0.2,-0.1,0.0,0.2,0.0,3,film|lighting|cinematography|atmosphere|landscape,the lighting of Blade Runner 2049 and 1917
+Frida Kahlo,painter,Mexico,Spanish,-0.6,0.0,0.4,0.8,0.3,5,portrait|symbolic|bold colour|identity|pain,bold self-portraits full of symbols
+Vincent van Gogh,painter,Netherlands,,-0.9,0.1,0.6,0.6,0.9,5,painterly|swirling|night|stars|expressive,The Starry Night and thick swirling brushstrokes
+Claude Monet,painter,France,,-0.9,0.6,-0.4,0.5,0.6,5,impressionist|light|water|garden|soft,Water Lilies and light at different times of day
+Hilma af Klint,painter,Sweden,,-0.9,0.4,0.1,0.5,0.0,3,abstract|spiritual|geometric|pastel|symbolic,early spiritual abstract paintings
+Mark Rothko,painter,USA,,-0.5,-0.2,-0.7,0.5,0.3,4,abstract|colour field|meditative|emotional|calm,large fields of glowing colour
+Georgia O'Keeffe,painter,USA,,-0.6,0.4,-0.2,0.7,0.0,4,flowers|desert|close-up|organic|calm,close-up flowers and desert landscapes
+Edward Hopper,painter,USA,,-0.6,-0.5,-0.5,0.4,0.0,4,loneliness|city|light|night|quiet,Nighthawks and lonely light in cities
+Katsushika Hokusai,artist,Japan,,-1.0,0.3,0.3,0.4,-0.2,5,woodblock|wave|nature|ukiyo-e|mountain,The Great Wave off Kanagawa
+Gustav Klimt,painter,Austria,,-0.9,0.5,0.1,0.8,0.0,5,gold|pattern|romantic|ornate|art nouveau,The Kiss with its gold leaf and pattern
+Alphonse Mucha,artist,Czechia,,-0.9,0.6,0.0,0.6,-0.1,4,art nouveau|poster|flowers|flowing hair|ornate,Art Nouveau posters with flowing hair and flowers
+Henri Matisse,artist,France,,-0.8,0.8,0.5,0.8,-0.2,5,cut-outs|bright colour|playful|shapes|joy,bright paper cut-outs and joyful colour
+Yayoi Kusama,artist,Japan,,0.0,0.4,0.6,0.5,-0.2,5,dots|infinity|repetition|pop|immersive,polka dots and infinity mirror rooms
+Jean-Michel Basquiat,painter,USA,,-0.4,0.0,0.9,0.5,0.9,5,street|raw|text|crowns|energetic,raw text-filled paintings rooted in street art
+Keith Haring,artist,USA,,-0.4,0.7,0.8,0.5,0.0,4,bold line|figures|public art|playful|activism,bold line figures and public murals
+Saul Bass,graphic designer,USA,,-0.5,0.3,0.4,0.4,-0.4,3,minimal|poster|film titles|bold|shapes,minimal film posters and title sequences
+Paula Scher,graphic designer,USA,,0.0,0.6,0.8,0.5,-0.1,3,typography|bold|energetic|identity|maps,big energetic typography and identities
+Saul Leiter,photographer,USA,,-0.6,0.1,-0.5,0.5,0.4,3,photography|colour|rain|painterly|street,soft painterly colour street photographs
+Fan Ho,photographer,Hong Kong,,-0.6,0.1,-0.3,0.3,0.2,2,photography|light and shadow|city|geometry|black and white,light and shadow in 1950s and 60s Hong Kong
+Vivian Maier,photographer,USA,,-0.6,0.1,0.0,0.3,0.3,3,photography|street|self-portrait|everyday|black and white,street photographs discovered after her death
+Wolfgang Tillmans,photographer,Germany,,0.0,0.3,0.0,0.3,0.2,3,photography|intimate|everyday|casual|youth,casual intimate everyday photographs
+Shaun Tan,illustrator,Australia,,0.0,0.1,-0.3,0.4,0.2,3,illustration|wordless|migration|surreal|gentle,The Arrival: a wordless graphic novel about migration
+Oliver Jeffers,illustrator,Northern Ireland,English,0.3,0.6,0.1,0.6,0.2,3,illustration|picture books|humour|gentle|children,picture books with gentle humour
+Tove Jansson,writer and illustrator,Finland,Swedish,-0.6,0.5,-0.3,0.5,0.2,4,illustration|whimsical|nature|family|gentle,the Moomins
+Beatrix Potter,illustrator,UK,English,-0.9,0.6,-0.4,0.6,0.1,4,illustration|nature|watercolour|animals|gentle,The Tale of Peter Rabbit and nature watercolours
+Björk,musician,Iceland,English + Icelandic,0.3,0.2,0.6,0.3,0.4,4,music|experimental|nature|art video|strange,experimental music and art-led music videos
+Ryuichi Sakamoto,composer,Japan,,0.0,0.0,-0.5,0.3,0.0,3,music|piano|electronic|film|meditative,piano and electronic film music
+Nusrat Fateh Ali Khan,singer,Pakistan,Punjabi + Urdu,-0.5,0.6,0.7,0.7,0.2,4,music|qawwali|spiritual|voice|ecstatic,qawwali singing of spiritual intensity
+Ali Sethi,singer,Pakistan,Punjabi + Urdu,0.4,0.3,0.3,0.6,0.1,3,music|ghazal|pop|longing|voice,ghazal and pop including Pasoori
+Rosalía,musician,Spain,Spanish,0.6,0.4,0.7,0.7,0.2,4,music|flamenco|pop|experimental|bold,flamenco mixed with experimental pop
+Burna Boy,musician,Nigeria,English,0.5,0.6,0.6,0.7,0.1,4,music|afrofusion|confident|dance|heritage,Afrofusion music
+Kazuo Ishiguro,writer,UK,English,0.0,-0.4,-0.6,0.3,0.0,4,fiction|memory|quiet|loss|restraint,Never Let Me Go: quiet stories of memory and loss
+Haruki Murakami,writer,Japan,Japanese,0.2,-0.2,-0.3,0.3,0.0,5,fiction|dreamlike|loneliness|surreal|music,dreamlike stories of loneliness
+Mary Oliver,poet,USA,English,-0.2,0.7,-0.5,0.6,0.1,4,poetry|nature|attention|gentle|wonder,poems about paying attention to nature

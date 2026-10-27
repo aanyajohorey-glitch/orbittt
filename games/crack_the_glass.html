@@ -1,0 +1,87 @@
+<!-- Crack the Glass (for angry feelings)
+     Tap to crack a pane of glass and let some of that energy out.
+     It lasts about a minute, then it turns into a short breathing cool-down,
+     because anger usually needs to come DOWN, not just out. -->
+<h1>Crack the Glass</h1>
+<p class="hint">Tap the glass as hard and as fast as you like. After about a minute it shatters, and we cool down together.</p>
+<canvas id="glass" width="640" height="380" aria-label="A pane of glass. Tap to crack it."></canvas>
+<p class="soft" id="msg">Tap anywhere on the glass.</p>
+<script>
+const LIMIT = 60;                     // seconds of cracking before the cool-down
+const cv = document.getElementById("glass"), ctx = cv.getContext("2d");
+let cracks = [], shards = [], started = null, mode = "glass", coolStart = 0;
+
+function crack(x, y) {
+  const lines = [];
+  const n = 6 + Math.floor(Math.random() * 5);
+  for (let i = 0; i < n; i++) {
+    let a = (i / n) * Math.PI * 2 + Math.random() * 0.5, px = x, py = y;
+    const pts = [[px, py]];
+    const len = 60 + Math.random() * 160;
+    for (let d = 0; d < len; d += 18) {
+      a += (Math.random() - 0.5) * 0.5; px += Math.cos(a) * 18; py += Math.sin(a) * 18; pts.push([px, py]);
+    }
+    lines.push(pts);
+  }
+  cracks.push({x, y, lines});
+}
+cv.addEventListener("pointerdown", e => {
+  if (mode !== "glass") return;
+  const r = cv.getBoundingClientRect();
+  if (!started) started = performance.now();
+  crack((e.clientX - r.left) * cv.width / r.width, (e.clientY - r.top) * cv.height / r.height);
+});
+function shatter() {
+  mode = "falling";
+  document.getElementById("msg").textContent = "Let it fall.";
+  for (let i = 0; i < 70; i++) shards.push({x: Math.random() * cv.width, y: Math.random() * cv.height,
+    vx: (Math.random() - 0.5) * 2, vy: Math.random() * 2, r: Math.random() * 6, s: 8 + Math.random() * 26});
+  setTimeout(() => { mode = "cool"; coolStart = performance.now(); }, REDUCED ? 300 : 2200);
+}
+function glassBack() {
+  const g = ctx.createLinearGradient(0, 0, cv.width, cv.height);
+  g.addColorStop(0, "#E9EEF6"); g.addColorStop(1, "#CBD5E6");
+  ctx.fillStyle = g; ctx.fillRect(0, 0, cv.width, cv.height);
+  ctx.strokeStyle = "rgba(255,255,255,0.7)"; ctx.lineWidth = 10;
+  ctx.beginPath(); ctx.moveTo(60, 330); ctx.lineTo(220, 40); ctx.stroke();
+}
+function draw(now) {
+  ctx.clearRect(0, 0, cv.width, cv.height);
+  if (mode === "glass") {
+    glassBack();
+    ctx.strokeStyle = "rgba(52,49,59,0.55)"; ctx.lineWidth = 1.2;
+    for (const c of cracks) for (const pts of c.lines) {
+      ctx.beginPath(); pts.forEach(([x, y], i) => i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)); ctx.stroke();
+    }
+    if (started) {
+      const left = Math.max(0, LIMIT - (now - started) / 1000);
+      document.getElementById("msg").textContent = cracks.length > 25 ? "That's a lot of cracks. Keep going if you need to."
+        : "Tap anywhere on the glass.";
+      ctx.fillStyle = "rgba(52,49,59,0.35)"; ctx.fillRect(0, cv.height - 5, cv.width * left / LIMIT, 5);
+      if (left <= 0) shatter();
+    }
+  } else if (mode === "falling") {
+    for (const s of shards) {
+      s.vy += 0.25; s.x += s.vx; s.y += s.vy; s.r += 0.05;
+      ctx.save(); ctx.translate(s.x, s.y); ctx.rotate(s.r);
+      ctx.fillStyle = "rgba(203,213,230,0.85)"; ctx.strokeStyle = "rgba(255,255,255,0.9)";
+      ctx.beginPath(); ctx.moveTo(0, -s.s / 2); ctx.lineTo(s.s / 2, s.s / 3); ctx.lineTo(-s.s / 3, s.s / 2); ctx.closePath();
+      ctx.fill(); ctx.stroke(); ctx.restore();
+    }
+  } else {                                                // breathing cool-down: in 4, out 6
+    const t = ((now - coolStart) / 1000) % 10, breathingIn = t < 4;
+    const k = breathingIn ? t / 4 : 1 - (t - 4) / 6, ease = 0.5 - Math.cos(Math.PI * k) / 2;
+    const r = 40 + ease * 90, cx = cv.width / 2, cy = cv.height / 2 - 18;
+    const g = ctx.createRadialGradient(cx - r * 0.3, cy - r * 0.35, r * 0.1, cx, cy, r);
+    g.addColorStop(0, "#ffffff"); g.addColorStop(0.5, "#B9C8EA"); g.addColorStop(1, "#7F93BF");
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = "#34313B"; ctx.textAlign = "center"; ctx.font = "500 28px 'Cormorant Garamond', Georgia, serif";
+    ctx.fillText(breathingIn ? "Breathe in" : "Breathe out slowly", cx, cv.height - 22);
+    const rounds = Math.floor((now - coolStart) / 10000);
+    document.getElementById("msg").textContent = rounds < 5 ? "Cool-down: follow the circle for five slow breaths."
+      : "Well done. Notice your jaw and hands. Are they a little softer now?";
+  }
+  requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+</script>

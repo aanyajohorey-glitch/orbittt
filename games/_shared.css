@@ -1,0 +1,29 @@
+/* Shared look for ORBIT's stress-buster games.
+   games.py puts this file into every game, and sets the colours
+   (--a, --b, --c, --ink) from the feeling's world palette. */
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: #34313B;
+  background: radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--a) 45%, #fff), #F8F6F2 70%);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding: 14px; user-select: none; -webkit-user-select: none;
+}
+h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 1.6rem; margin: 2px 0 0; }
+.hint { font-size: 0.86rem; color: rgba(52, 49, 59, 0.66); margin: 0; text-align: center; max-width: 52ch; line-height: 1.5; }
+canvas, .stage {
+  width: 100%; max-width: 640px; border-radius: 22px; touch-action: none;
+  background: rgba(255, 255, 255, 0.55); border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 20px 40px -28px rgba(52, 49, 59, 0.45);
+}
+.row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; }
+button, input[type=text] {
+  font: inherit; font-size: 0.9rem; border-radius: 999px; padding: 8px 16px;
+  border: 1px solid rgba(52, 49, 59, 0.14); background: rgba(255, 255, 255, 0.8); color: #34313B;
+}
+button { cursor: pointer; }
+button.primary { background: linear-gradient(180deg, color-mix(in srgb, var(--a) 70%, #fff), var(--ink)); border-color: #fff; font-weight: 600; }
+button:focus-visible, input:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
+input[type=text] { min-width: 0; flex: 1 1 220px; max-width: 360px; border-radius: 14px; }
+.soft { font-size: 0.8rem; color: rgba(52, 49, 59, 0.6); text-align: center; min-height: 1.2em; margin: 0; }

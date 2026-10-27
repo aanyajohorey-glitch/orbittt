@@ -1,0 +1,67 @@
+name,era_label,era,valence,arousal,brightness,warmth,texture,origin,tags,cues
+Art Nouveau,1890s-1910s,-0.8,0.5,-0.1,0.6,0.4,-0.2,Europe,organic|ornate|floral|elegant|nature,whiplash curves;flowers and vines;muted gold
+Art Deco,1920s-1930s,-0.6,0.5,0.4,0.6,0.3,-0.6,Global,geometric|luxury|glamour|bold,sunburst lines;gold and black;symmetry
+Bauhaus,1920s,-0.6,0.3,0.3,0.7,0.0,-0.6,Germany,geometric|functional|primary|modern,primary colours;circles and squares;clean type
+Constructivism,1920s,-0.6,0.0,0.7,0.6,0.2,-0.2,Russia,bold|political|diagonal|poster,red and black;diagonals;photomontage
+De Stijl,1910s-1920s,-0.7,0.3,0.2,0.8,0.0,-0.8,Netherlands,geometric|primary|grid|minimal,black grid;red blue yellow blocks
+Swiss Style,1950s-1960s,-0.3,0.2,0.0,0.8,-0.3,-0.8,Switzerland,grid|clean|typographic|corporate,grids;sans-serif type;white space
+Mid-century Modern,1950s,-0.4,0.5,0.1,0.7,0.5,-0.4,USA,retro|warm|organic|clean,teak wood;mustard and teal;atomic shapes
+Memphis Design,1980s,-0.2,0.8,0.8,0.9,0.4,0.1,Italy,playful|loud|geometric|pop,squiggles;terrazzo;clashing pastels
+Pop Art,1960s,-0.4,0.8,0.8,0.9,0.4,-0.1,USA,bold|comic|loud|pop,halftone dots;bright primaries;comic panels
+Op Art,1960s,-0.4,0.1,0.7,0.8,-0.2,-0.6,Europe,optical|geometric|black and white|illusion,moire patterns;stripes;illusion
+Psychedelic 60s,1960s,-0.4,0.6,0.9,0.8,0.6,0.3,Global,trippy|colourful|swirl|music,melting type;swirls;saturated rainbow
+Impressionism,1870s-1890s,-0.9,0.6,-0.3,0.8,0.4,0.5,France,light|nature|soft|painterly,dappled light;loose brushstrokes;pastel outdoors
+Post-Impressionism,1880s-1900s,-0.9,0.3,0.3,0.7,0.5,0.7,Europe,expressive|painterly|bold colour,thick brushstrokes;swirling skies;bold outlines
+Expressionism,1900s-1920s,-0.8,-0.5,0.7,0.4,0.2,0.7,Germany,emotional|distorted|intense|dark,jagged shapes;harsh colour;distortion
+Surrealism,1920s-1940s,-0.7,0.0,0.3,0.6,0.1,0.0,Europe,dreamlike|strange|uncanny|symbolic,melting forms;impossible spaces;long shadows
+Cubism,1907-1920s,-0.8,0.0,0.3,0.5,0.3,0.2,France,fragmented|geometric|abstract,broken planes;many viewpoints;earthy tones
+Fauvism,1905-1910,-0.8,0.7,0.7,0.9,0.7,0.5,France,wild colour|joyful|painterly,unnatural colour;flat shapes;vivid
+Abstract Expressionism,1940s-1950s,-0.5,-0.1,0.6,0.5,0.2,0.8,USA,gestural|emotional|abstract|large,drips;big gestures;raw canvas
+Colour Field,1950s-1960s,-0.5,-0.2,-0.6,0.5,0.3,-0.5,USA,calm|abstract|meditative|colour,huge colour blocks;soft edges;quiet
+Minimalism,1960s-now,0.1,0.1,-0.7,0.9,-0.2,-0.9,Global,clean|calm|simple|space,white space;few elements;monochrome
+Brutalism,1950s-1970s,-0.4,-0.3,0.3,0.4,-0.4,0.8,Global,raw|concrete|heavy|bold,raw concrete;blocky forms;grey
+Wabi-sabi,timeless,-0.6,0.2,-0.7,0.6,0.4,0.7,Japan,imperfect|calm|natural|quiet,cracked ceramic;earth tones;natural light
+Japandi,2010s-now,0.6,0.4,-0.7,0.8,0.3,0.0,Japan + Scandinavia,calm|natural|minimal|warm,light wood;linen;muted neutrals
+Scandinavian Hygge,2010s,0.5,0.7,-0.6,0.8,0.6,0.1,Scandinavia,cosy|warm|soft|home,candles;knitted wool;soft whites
+Ukiyo-e,1600s-1800s,-1.0,0.3,0.1,0.7,0.2,-0.2,Japan,woodblock|nature|flat colour|wave,flat colour;bold outlines;waves and mountains
+Mughal Miniature,1500s-1700s,-1.0,0.5,0.0,0.7,0.6,-0.1,India,ornate|courtly|detailed|gold,fine detail;gold borders;garden scenes
+Rajput Painting,1600s-1800s,-1.0,0.5,0.2,0.7,0.7,0.0,India,devotional|colourful|romantic|folk,saturated red and yellow;krishna stories;flat perspective
+Bengal School,1900s-1930s,-0.8,0.4,-0.4,0.6,0.5,0.3,India,soft|wash|national|poetic,watercolour wash;soft figures;earthy
+Madhubani,traditional,-1.0,0.6,0.4,0.8,0.7,0.0,India (Bihar),folk|pattern|nature|bold line,double outlines;fish and peacocks;no empty space
+Warli,traditional,-1.0,0.5,0.2,0.5,0.4,0.4,India (Maharashtra),folk|minimal|community|dance,white stick figures;mud-red ground;circles of dancers
+Gond Art,traditional,-1.0,0.6,0.3,0.7,0.5,0.2,India (Madhya Pradesh),folk|nature|dots|story,dot and dash fills;animals and trees;bright colours
+Kalamkari,traditional,-1.0,0.4,0.0,0.6,0.7,0.4,India (Andhra Pradesh),textile|hand-painted|mythology|earthy,natural dyes;pen-drawn borders;epic stories
+Pattachitra,traditional,-1.0,0.5,0.3,0.7,0.7,0.2,India (Odisha),scroll|mythology|ornate|folk,ornate borders;bold red;narrative panels
+Kerala Mural,traditional,-1.0,0.5,0.3,0.6,0.8,0.1,India (Kerala),temple|ochre|mythology|devotional,ochre and green;rounded figures;temple walls
+Indian Truck Art,1970s-now,-0.2,0.7,0.8,0.9,0.7,0.3,South Asia,folk|loud|kitsch|colourful,horn ok please;painted borders;tassels and mirrors
+Retro Bollywood Poster,1960s-1980s,-0.5,0.5,0.8,0.7,0.8,0.5,India,hand-painted|dramatic|filmi|bold,hand-painted faces;dramatic type;saturated
+Bollywood Maximalism,2000s,0.0,0.8,0.9,0.9,0.9,0.1,India,celebration|gold|dance|loud,gold and magenta;wedding lights;sparkle
+Film Noir,1940s-1950s,-0.6,-0.4,0.2,0.1,-0.4,0.3,USA,dark|mystery|shadow|black and white,venetian blind shadows;high contrast;rain
+Neo-noir,1980s-now,0.0,-0.3,0.4,0.2,-0.3,0.2,Global,neon|mystery|night|urban,wet streets;teal and orange;smoke
+French New Wave,1960s,-0.4,0.2,0.2,0.6,0.2,0.4,France,film|youthful|spontaneous|candid,jump cuts;black and white;street life
+Synthwave,1980s revival,0.3,0.4,0.7,0.4,0.0,-0.2,Global,retro-futurist|neon|night|music,sunset grid;magenta and cyan;chrome
+Vaporwave,1990s revival,0.2,0.2,0.0,0.7,0.0,0.0,Internet,nostalgic|ironic|pastel|digital,greek busts;pastel pink and teal;old computers
+Y2K,1999-2004,0.0,0.7,0.7,0.9,0.0,-0.6,Global,glossy|futuristic|playful|tech,chrome;bubble shapes;frosted plastic
+Cyberpunk,1980s-future,0.8,-0.2,0.8,0.3,-0.4,0.3,Global,neon|dystopian|tech|urban,neon signs;rain;dense city
+Solarpunk,future,0.9,0.8,0.3,0.8,0.5,0.0,Global,hopeful|green|community|nature,plants on buildings;solar glass;sunlight
+Afrofuturism,1950s-future,0.8,0.7,0.7,0.6,0.6,0.2,Global (African diaspora),futuristic|heritage|bold|cosmic,patterned textiles;space imagery;gold
+Steampunk,Victorian-future,0.0,0.2,0.4,0.4,0.6,0.6,Global,brass|machinery|victorian|adventure,brass gears;leather;sepia
+Gothic,1100s-1500s,-0.9,-0.4,0.3,0.2,0.0,0.6,Europe,dark|dramatic|cathedral|mystery,pointed arches;stained glass;candlelight
+Baroque,1600s-1750,-0.9,0.3,0.6,0.5,0.6,0.4,Europe,dramatic|ornate|gold|light and shadow,deep shadows;gold frames;drama
+Rococo,1730s-1770s,-0.9,0.6,0.2,0.9,0.4,-0.1,France,pastel|playful|ornate|romantic,pastel pink;curly frames;gardens
+Pre-Raphaelite,1850s,-0.9,0.0,0.1,0.6,0.4,0.2,Britain,romantic|detailed|nature|myth,long hair;jewel tones;flowers
+Dark Academia,2010s revival,-0.6,-0.3,-0.2,0.3,0.4,0.5,Internet,literary|moody|tweed|libraries,old books;candlelight;brown and burgundy
+Light Academia,2010s revival,-0.6,0.6,-0.3,0.9,0.4,0.2,Internet,literary|soft|sunny|classical,cream pages;sunlit libraries;linen
+Cottagecore,2010s revival,-0.5,0.7,-0.5,0.8,0.6,0.4,Internet,rural|cosy|floral|handmade,wildflowers;baking;gingham
+Grunge,1990s,-0.3,-0.4,0.6,0.3,0.0,0.9,USA,raw|messy|music|rebellious,flannel;photocopied flyers;distressed type
+Punk Zine,1970s-1980s,-0.5,0.0,0.9,0.5,0.1,0.9,UK + USA,diy|collage|loud|rebellious,cut-out letters;photocopy grain;safety pins
+Risograph Print,2010s,0.0,0.5,0.4,0.8,0.4,0.6,Global,print|grainy|indie|zine,misregistered colours;fluorescent pink;grain
+Lo-fi Anime,2010s,0.1,0.4,-0.5,0.5,0.4,0.3,Internet,cosy|night|study|nostalgic,study desk;window rain;soft glow
+Studio Ghibli-esque,1980s-now,0.0,0.6,0.0,0.8,0.5,0.3,Japan,nature|whimsical|gentle|hand-drawn,green fields;big skies;hand-painted
+Kawaii,1970s-now,0.1,0.9,0.5,1.0,0.3,-0.4,Japan,cute|pastel|playful|soft,round faces;pastels;stickers
+Pastel Goth,2010s,0.2,0.0,0.2,0.6,-0.1,0.0,Internet,cute|dark|pastel|alternative,pastel with black;moons;skulls with bows
+Boho,1960s-now,-0.3,0.6,0.0,0.7,0.8,0.6,Global,free|earthy|textile|travel,macrame;rattan;terracotta
+Maximalism,2020s,0.2,0.8,0.8,0.8,0.6,0.3,Global,more is more|pattern|colour|eclectic,clashing patterns;layered objects;bold colour
+Glitch Art,2000s-now,0.6,-0.1,0.7,0.5,-0.4,0.4,Internet,digital|broken|experimental|tech,pixel sorting;RGB split;scan lines
+Coquette,2020s,0.2,0.7,0.0,0.9,0.4,-0.2,Internet,romantic|bows|soft|feminine,satin bows;pale pink;lace
+Desert Modernism,1950s-now,-0.3,0.5,-0.2,0.8,0.8,0.2,USA,sunbaked|warm|minimal|architecture,terracotta;long shadows;pool blue
